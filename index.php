@@ -13,7 +13,6 @@ date_default_timezone_set('UTC');
     <link rel="stylesheet" href="./bootstrap/5.1.2/css/bootstrap.min.css">
 
     <!--  Mon css perso pour inclure les polices de caracteres-->
-    <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/index.css">
 
     <!-- scripts necessaires pour bootstrap -->
@@ -28,9 +27,9 @@ date_default_timezone_set('UTC');
 
     <!-- DIV = Ce que je veux dépendant de ce que je met dedans  -->
     <div id="header" class="">
-      <p>
-        je suis le header
-      </p>
+        <?php
+          include "header.php";
+        ?>
     </div>
 
     <div id="content" class="container">
