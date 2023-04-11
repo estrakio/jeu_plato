@@ -1,0 +1,1 @@
+docker-compose -p doufs -f docker-compose/docker-compose.yml up
