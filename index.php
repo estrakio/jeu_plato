@@ -21,36 +21,15 @@ include("fonction.php");
 </head>
 
 <body class="body">
-  <?php
-  // include "sql.php";
-  ?>
-
-  <!-- <div id="header" class="">
-        <?php
-        //   include "header.php";
-        ?>
-    </div> -->
-
-  <div id="content" class="container">
+  <div id="content" class="test">
     <?php
-
     if (isset($_GET["content"])) {
-
       include $_GET["content"] . ".php";
     } else {
       include "accueil.php";
     }
     ?>
-
+    
   </div>
-
-  <!-- <div id="footer" class="">
-    <?php
-    // include "footer.php";
-    ?>
-  </div> -->
-
-
-
 </body>
 </html>

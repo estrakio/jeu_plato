@@ -2,16 +2,49 @@
 .body{
   background-color  : black;
   color             : aliceblue;
+  overflow-x: hidden;
+}
+
+.test{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Création d'une classe pour les cases du tableau */
-.case{
+.case_mur{
+  background-image  : url(../images/mur.png);
+  background-size   : contain;
   width             : 75px;
   height            : 75px;
-  border            : 1px solid aliceblue;
-  text-align        : center;
+  border            : 1px solid lightgrey;
   vertical-align    : middle;
   line-height       : 50px;
   font-size         : 30px;
   text-align        : center;
+}
+
+.case{
+  background-image  : url(../images/herbe.png);
+  background-size   : contain;
+  width             : 75px;
+  height            : 75px;
+  border            : 1px solid lightgrey;
+  vertical-align    : middle;
+  line-height       : 50px;
+  font-size         : 30px;
+  text-align        : center;
+}
+
+/* Style de la barre de défilement en mode sombre */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #333;
+  /* Couleur de fond en mode sombre */
+}
+
+/* Style du curseur de la barre de défilement en mode sombre */
+::-webkit-scrollbar-thumb {
+  background-color: #555;
+  /* Couleur du curseur en mode sombre */
 }

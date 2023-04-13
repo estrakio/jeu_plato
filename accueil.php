@@ -6,31 +6,34 @@ include_once('./Class/tableau.php');
 $player = new Hero();
 // echo($player->getLife());
 
-$tableau = new Tableau(6,6);
+$tableau = new Tableau(6, 6);
 
-echo("<div class='text-center'>");
-$tableau->creation_tableau(1);
-echo("</div>");
-
+// echo("<div class='test'>");
+// $tableau->creation_tableau(1);
+// echo("</div>");
+// echo("<p class='text-center'>");
+// var_dump($tableau->getliste_niveau());
+// echo("</p>");  
 
 ?>
 
 
 
+<div class="container">
+  <div class="row">
 
-<!-- <div class="row">
-
-  <div class="case"></div>
-  <div class="case"></div>
-  <div class="case"></div>
-  <div class="case"></div>
-</div>
-<div class="row">
-
-  <div class="case"></div>
-  <div class="case"></div>
-  <div class="case"></div>
-  <div class="case"></div>
     <div class="case"></div>
-  <div class="case"></div>
-  </div> -->
+    <div class="case"></div>
+    <div class="case"></div>
+    <div class="case"></div>
+  </div>
+  <div class="row">
+
+    <div class="case"></div>
+    <div class="case"></div>
+    <div class="case"></div>
+    <div class="case"></div>
+    <div class="case"></div>
+    <div class="case"></div>
+  </div>
+</div>
