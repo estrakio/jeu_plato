@@ -1,3 +1,17 @@
 
+.body{
+  background-color  : black;
+  color             : aliceblue;
+}
 
-
+/* Création d'une classe pour les cases du tableau */
+.case{
+  width             : 75px;
+  height            : 75px;
+  border            : 1px solid aliceblue;
+  text-align        : center;
+  vertical-align    : middle;
+  line-height       : 50px;
+  font-size         : 30px;
+  text-align        : center;
+}
