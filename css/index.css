@@ -1,4 +1,28 @@
+.center {
+  margin: auto;
+  /* width: 25%; */
+  border: 3px solid green;
+  padding-left: 70px;
+  padding-top:  50px;
+}
 
+.barre_bouton{
+  padding-top: 30px;
+  height: 100px;
+}
+
+.petitcarre{
+  border: 3px solid rgb(128, 0, 0);
+
+}
+
+.cent_pour_cent{
+  height: 100%;
+}
+
+.cinquante_pour_cent{
+  height: 50%;
+}
 .body{
   background-color  : black;
   color             : aliceblue;
@@ -22,6 +46,7 @@
   line-height       : 50px;
   font-size         : 30px;
   text-align        : center;
+  display: inline-block;
 }
 
 .case{
@@ -34,6 +59,7 @@
   line-height       : 50px;
   font-size         : 30px;
   text-align        : center;
+  display: inline-block;
 }
 
 /* Style de la barre de défilement en mode sombre */

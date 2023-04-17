@@ -1,14 +1,14 @@
 <?php
 
 
-Class Tableau
+class Tableau
 {
 
   private int $taille_vertical;
   private int $taille_horizontal;
   private array $tableau;
   private array $liste_niveau;
-  private array $spawn; 
+  private array $spawn;
 
   public function __construct($taille_vertical, $taille_horizontal)
   {
@@ -24,14 +24,15 @@ Class Tableau
   {
     $random = $this->niveau_random();
     $this->liste_niveau = array(
-      1 =>array(7, 10, 13, 16, 9, 20),
-      2 =>$random );
+      1 => array(7, 10, 13, 16, 9, 20),
+      2 => $random
+    );
 
   }
   private function niveau_random()
   {
     $liste = array();
-    while (count($liste) < 6) { 
+    while (count($liste) < 6) {
       $random_chiffre = rand(0, 35);
       if (!in_array($random_chiffre, $liste)) {
         $liste[] = $random_chiffre;
@@ -44,16 +45,19 @@ Class Tableau
   public function creation_tableau($niveau)
   {
     $index = 0;
-    for ($x=0; $x <6 ; $x++) { 
-      echo('<div div="col_'.$x.'"class="row">');
-      for ($y=0; $y <6 ; $y++) { 
+    for ($x = 0; $x < 6; $x++) {
+      echo ('<div div="col_' . $x . '"class="">');
+      for ($y = 0; $y < 6; $y++) {
         if (in_array($index, $this->liste_niveau[$niveau])) {
-          echo('<div class="case_mur"></div>');
-        }else{
-        echo("<div class='case'></div>");
-        } $index+=1; } }
-      echo('</div>');
+          echo ('<div id ="case_'.$x.'_'.$y.'"class="case_mur"></div>');
+        } else {
+          echo ('<div id ="case_'.$x.'_'.$y.'"class="case"></div>');
+        }
+        $index += 1;
+      }
+      echo ('</div>');
     }
-    
-  
+  }
+
+
 }

@@ -8,32 +8,38 @@ $player = new Hero();
 
 $tableau = new Tableau(6, 6);
 
-// echo("<div class='test'>");
-// $tableau->creation_tableau(1);
-// echo("</div>");
-// echo("<p class='text-center'>");
-// var_dump($tableau->getliste_niveau());
-// echo("</p>");  
-
 ?>
-
-
-
-<div class="container">
-  <div class="row">
-
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
+<div class='center row'>
+  <div class='col-5 petitcarre'>
+    <?php $tableau->creation_tableau(2); ?>
   </div>
-  <div class="row">
+  <div class='col-7 petitcarre'>
+    <div class="container cent_pour_cent">
+      <div class="row cent_pour_cent">
+        <!-- coté menu de 'log' qui rend compte de ce qu'il ce passe en jeu -->
+        <div class="col-6 petitcarre cent_pour_cent">
+          fjksqdlkfjklqmsdj
+        </div>
+        <!-- coté menu + hdv etc -->
+        <div class="col-6 petitcarre cent_pour_cent">
+          <!-- coté carac perso -->
+          <div class="row petitcarre cinquante_pour_cent">
 
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
-    <div class="case"></div>
+          </div>
+          <!-- coté hdv -->
+          <div class="row petitcarre cinquante_pour_cent">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row  barre_bouton ">
+  <div class="col-6 petitcarre cent_pour_cent">
+
+  </div>
+  <div class="col-6 petitcarre cent_pour_cent">
+
   </div>
 </div>

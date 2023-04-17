@@ -21,7 +21,7 @@ include("fonction.php");
 </head>
 
 <body class="body">
-  <div id="content" class="test">
+  <div id="content" class="container">
     <?php
     if (isset($_GET["content"])) {
       include $_GET["content"] . ".php";
