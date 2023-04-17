@@ -17,7 +17,7 @@ include("fonction.php");
 
   <!-- scripts necessaires pour bootstrap -->
   <script src="./bootstrap/5.1.2/js/bootstrap.bundle.min.js"></script>
-
+  <script src="./js/script.js"></script>
 </head>
 
 <body class="body">
