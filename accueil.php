@@ -37,9 +37,9 @@ $tableau = new Tableau(6, 6);
 </div>
 <div class="row  barre_bouton ">
   <div class="col-6 petitcarre cent_pour_cent">
-
+    <button id="testou">a</button>
   </div>
   <div class="col-6 petitcarre cent_pour_cent">
-
+      <button id="generate_level" type="button" class="btn btn-dark" style="">Générer un niveau aléatoire</button>
   </div>
 </div>
