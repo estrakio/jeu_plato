@@ -1,4 +1,6 @@
 class Hero {
+
+  
   constructor() {
     this.hp = 100;
     this.pa = 6;

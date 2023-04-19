@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   const test = new Hero();
   const tableau = new Tableau();
   tableau.recuperer_terrain();
-  alert(tableau.terrain);
+  // alert(tableau.terrain);
 
 
   // appel la méthode "hello" de la classe Hero
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event){
   
   // permet d'ajouter un écouteur d'évènement sur le bouton et d'executer la fonction anonyme qui suis
   bouton_test.addEventListener("click", function() {
-    alert("Vous avez cliqué sur le bouton !");
+    tableau.generer_mur();
   });
 
 });

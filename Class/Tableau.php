@@ -48,7 +48,7 @@ class Tableau
     for ($x = 0; $x < 6; $x++) {
       echo ('<div div="col_' . $x . '"class="">');
       for ($y = 0; $y < 6; $y++) {
-          echo ('<div id ="case_'.$x.'_'.$y.'"class="case_mur"></div>');
+          echo ('<div id ="case_'.$x.'_'.$y.'"class="case"></div>');
         $index += 1;
       }
       echo ('</div>');

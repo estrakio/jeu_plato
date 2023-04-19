@@ -1,6 +1,7 @@
 class Tableau {
   constructor() {
     this.terrain = [];
+    this.liste_mur = [];
   }
 
   nombre_random(max) {
@@ -11,8 +12,7 @@ class Tableau {
 
     // Format de l'objet Case_terrain
     // var Case_terrain = {
-    //   x: 0,
-    //   y: 0,
+    //   div_name: "",
     //   mur: false,
     //   div: null
     // }
@@ -21,8 +21,7 @@ class Tableau {
       var ligne = [];
       for (let j = 0; j < 6; j++) {
         var div = new Object();
-        div.x = i;
-        div.y = j;
+        div.div_name = "case_" + i + "_" + j;
         div.mur = false;
         div.div = document.getElementById('case_' + i + '_' + j);
         ligne.push(div);
@@ -34,13 +33,44 @@ class Tableau {
   }
 
   generer_mur() {
-    // Generation d'une liste de 6 coordonnées ou seront les murs
-    var liste_mur = [];
-    for (let i = 0; i < 6; i++) {
-      coord_x = this.nombre_random(6);
-      coord_y = this.nombre_random(6);
+    // 
+    if (this.liste_mur.length > 0 ) {
+      this.liste_mur.forEach(element => {
+        var coord = element.split('_');
+        var x = coord[1];
+        var y = coord[2];
+        this.terrain[x][y].mur = true;
+        this.terrain[x][y].div.classList.remove('case_mur');
+        this.terrain[x][y].div.classList.add('case');
+      });
+      this.liste_mur = [];
+    } else {
+      
     }
+    // Generation d'une liste de 6 coordonnées ou seront les murs
+    while (this.liste_mur.length < 6) {
+      var coord_x = this.nombre_random(6);
+      var coord_y = this.nombre_random(6);
+      var coord = "case_" + coord_x + "_" + coord_y;
+      if (!this.liste_mur.includes(coord)) {
+        this.liste_mur.push(coord);
+      }
+    }
+
+    this.liste_mur.forEach(element => {
+      var coord = element.split('_');
+      var x = coord[1];
+      var y = coord[2];
+      this.terrain[x][y].mur = true;
+      this.terrain[x][y].div.classList.remove('case');
+      this.terrain[x][y].div.classList.add('case_mur');
+    });
+
+    console.log(this.liste_mur);
   }
 }
 
-
+// test_class() {
+//   let div = document.getElementById('case_0_0');
+//   div.classList.remove('mur');
+// }
