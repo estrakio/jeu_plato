@@ -68,9 +68,27 @@ class Tableau {
 
     console.log(this.liste_mur);
   }
+
+  depart_hero() {
+    var case_valide = false;
+    while (case_valide) {
+      var coord_x = this.nombre_random(6);
+      var coord_y = this.nombre_random(6);
+      var coord = "case_" + coord_x + "_" + coord_y;
+      if (!this.liste_mur.includes(coord)) {
+        case_valide = true;
+      }
+    }
+
+    this.terrain.forEach(element => {
+      element.forEach(case => {
+        case.div_name
+      });
+      this.terrain[x][y].div.classList.remove('case');
+      this.terrain[x][y].div.classList.add('hero');
+    });
+
+  }
 }
 
-// test_class() {
-//   let div = document.getElementById('case_0_0');
-//   div.classList.remove('mur');
-// }
+// Path: js\script.js
