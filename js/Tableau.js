@@ -1,7 +1,10 @@
 class Tableau {
   constructor() {
-    this.terrain = [];
-    this.liste_mur = [];
+    // Contient des Objets Case du tableau php
+    this.terrain;
+    // Contient les pairs de coordonnées des murs
+    this.liste_mur;
+    this.liste_hero;
   }
 
   nombre_random(max) {
@@ -16,77 +19,50 @@ class Tableau {
     //   mur: false,
     //   div: null
     // }
-
+    var terrain_ephemere = [];
     for (let i = 0; i < 6; i++) {
       var ligne = [];
       for (let j = 0; j < 6; j++) {
-        var div = new Object();
-        div.div_name = "case_" + i + "_" + j;
-        div.mur = false;
-        div.div = document.getElementById('case_' + i + '_' + j);
-        ligne.push(div);
+        var name = "case_" + i + "_" + j;
+        var div_html = document.getElementById(name);
+        var case_ = new Case(i, j, name, div_html);
+        ligne.push(case_);
       }
-      this.terrain.push(ligne);
+      terrain_ephemere.push(ligne);
     }
-
+    this.terrain = terrain_ephemere;
     console.log(this.terrain);
   }
 
   generer_mur() {
-    // 
-    if (this.liste_mur.length > 0 ) {
-      this.liste_mur.forEach(element => {
-        var coord = element.split('_');
-        var x = coord[1];
-        var y = coord[2];
-        this.terrain[x][y].mur = true;
-        this.terrain[x][y].div.classList.remove('case_mur');
-        this.terrain[x][y].div.classList.add('case');
-      });
-      this.liste_mur = [];
-    } else {
-      
-    }
-    // Generation d'une liste de 6 coordonnées ou seront les murs
-    while (this.liste_mur.length < 6) {
-      var coord_x = this.nombre_random(6);
-      var coord_y = this.nombre_random(6);
-      var coord = "case_" + coord_x + "_" + coord_y;
-      if (!this.liste_mur.includes(coord)) {
-        this.liste_mur.push(coord);
+    // Si réappui sur le bouton changer les murs
+    this.liste_mur?this.liste_mur.forEach(couple_case => {
+      this.terrain[couple_case[0]][couple_case[1]].set_case("case", "");
+    }):null;
+    
+    // Générer 6 coordonnées de murs aléatoires différentes
+    var list_mur_ephemere = [];
+    while (list_mur_ephemere.length < 6) {
+      var couple = [this.nombre_random(6), this.nombre_random(6)];
+      if (!list_mur_ephemere.includes(couple)) {
+        //alert("je rentre dans la condition pd ");
+        list_mur_ephemere.push(couple);
+        // Changer les class CSS des divs auquel les coordonnées 
+        this.terrain[couple[0]][couple[1]].set_case("case_mur", "mur");
       }
     }
-
-    this.liste_mur.forEach(element => {
-      var coord = element.split('_');
-      var x = coord[1];
-      var y = coord[2];
-      this.terrain[x][y].mur = true;
-      this.terrain[x][y].div.classList.remove('case');
-      this.terrain[x][y].div.classList.add('case_mur');
-    });
-
-    console.log(this.liste_mur);
+    // alert('je sors de la condition');
+    this.liste_mur = list_mur_ephemere;
   }
 
   depart_hero() {
-    var case_valide = false;
-    while (case_valide) {
-      var coord_x = this.nombre_random(6);
-      var coord_y = this.nombre_random(6);
-      var coord = "case_" + coord_x + "_" + coord_y;
-      if (!this.liste_mur.includes(coord)) {
-        case_valide = true;
-      }
-    }
+    // Si réappui sur le bouton changer le départ
+    this.liste_hero?this.terrain[this.liste_hero[0]][this.liste_hero[1]].set_case("case", ""):null;
 
-    this.terrain.forEach(element => {
-      element.forEach(case => {
-        case.div_name
-      });
-      this.terrain[x][y].div.classList.remove('case');
-      this.terrain[x][y].div.classList.add('hero');
-    });
+    var depart = [this.nombre_random(6), this.nombre_random(6)];
+    // alert(depart);
+    this.terrain[depart[0]][depart[1]].set_case("case_hero", "hero");
+    this.liste_hero = depart;
 
   }
 }

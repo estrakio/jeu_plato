@@ -62,8 +62,21 @@
   display: inline-block;
 }
 
-.hero{
+.case_hero{
   background-image  : url(../images/hero.png);
+  background-size   : contain;
+  width             : 75px;
+  height            : 75px;
+  border            : 1px solid lightgrey;
+  vertical-align    : middle;
+  line-height       : 50px;
+  font-size         : 30px;
+  text-align        : center;
+  display: inline-block;
+}
+
+.case_moutton{
+  background-image  : url(../images/moutton.png);
   background-size   : contain;
   width             : 75px;
   height            : 75px;

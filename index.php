@@ -19,6 +19,7 @@ include("fonction.php");
   <script src="./bootstrap/5.1.2/js/bootstrap.bundle.min.js"></script>
   <script src="./js/Hero.js"></script>
   <script src="./js/Tableau.js"></script>
+  <script src="./js/Case.js"></script>
   <script src="./js/script.js"></script>
 </head>
 
