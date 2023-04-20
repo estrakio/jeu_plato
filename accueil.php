@@ -17,7 +17,7 @@ $tableau = new Tableau(6, 6);
     <div class="container cent_pour_cent">
       <div class="row cent_pour_cent">
         <!-- coté menu de 'log' qui rend compte de ce qu'il ce passe en jeu -->
-        <div class="col-6 petitcarre cent_pour_cent">
+        <div id = "div_log" class="col-6 petitcarre cent_pour_cent">
           fjksqdlkfjklqmsdj
         </div>
         <!-- coté menu + hdv etc -->

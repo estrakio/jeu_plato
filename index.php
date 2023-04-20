@@ -20,6 +20,7 @@ include("fonction.php");
   <script src="./js/Hero.js"></script>
   <script src="./js/Tableau.js"></script>
   <script src="./js/Case.js"></script>
+  <script src="./js/Tableau.js"></script>
   <script src="./js/script.js"></script>
 </head>
 
