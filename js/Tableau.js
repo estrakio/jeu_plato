@@ -5,6 +5,7 @@ class Tableau {
     // Contient les pairs de coordonnées des murs
     this.liste_mur;
     this.liste_hero;
+    this.liste_entite;
   }
 
   nombre_random(max) {
@@ -63,8 +64,18 @@ class Tableau {
     // alert(depart);
     this.terrain[depart[0]][depart[1]].set_case("case_hero", "hero");
     this.liste_hero = depart;
-
+    Hero.pos_x = depart[0];
+    Hero.pos_y = depart[1];
   }
+
+  deppart_monstre() {
+  
+  
+  
+  }
+
 }
+
+
 
 // Path: js\script.js

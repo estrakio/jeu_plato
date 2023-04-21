@@ -1,22 +1,23 @@
 document.addEventListener("DOMContentLoaded", function(event){
-  // code to be executed when the document is ready
   
-  // permet de récuperer un element du html
+  
+  // Appel des Classes
+  const Hero    = new Hero();
+  const Tableau = new Tableau();
+  const Combat  = new Combat();
+  const Enemi   = new Enemi();
+  
+  // Récupération des éléments HTML
   const bouton_test = document.getElementById('generate_level');
-
-  // Aappel des Classes
-  const test    = new Hero();
-  const tableau = new Tableau();
-  const combat  = new Combat();
   
-  // Lancement des fonctions de base.
-  tableau.recuperer_terrain();
+  // Lancement des fonctions nécessaire à la récupération de données.
+  Tableau.recuperer_terrain();
   
   
-  // permet d'ajouter un écouteur d'évènement sur le bouton et d'executer la fonction anonyme qui suis
+  // ajout d'un écouteur d'évenement sur le bouton
   bouton_test.addEventListener("click", function() {
-    tableau.generer_mur();
-    tableau.depart_hero();
+    Tableau.generer_mur();
+    Tableau.depart_hero();
 
   });
 
